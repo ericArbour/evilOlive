@@ -7,5 +7,11 @@ app.controller('apiController', ['$scope', '$http', 'searchFactory', function($s
   }
   $scope.submit = function () {
     searchFactory.setSearch($scope.searchArray);
+    searchFactory.getSearch().then(function(result){
+      $scope.results = result;
+      console.log($scope.results);
+    }, function(error){
+      console.log(error);
+    });
   }
 }]);
