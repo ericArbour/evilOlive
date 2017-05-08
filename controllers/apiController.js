@@ -1,6 +1,6 @@
 var app = angular.module('myModule');
 
-app.controller('apiController', ['$scope', '$http', 'searchFactory', function($scope, $http, searchFactory) {
+app.controller('apiController', ['$scope', '$http', 'searchFactory', 'palFactory', function($scope, $http, searchFactory, palFactory) {
   $scope.searchArray = [];
   $scope.addIngredient = function () {
     $scope.searchArray.push($scope.item);
@@ -13,5 +13,8 @@ app.controller('apiController', ['$scope', '$http', 'searchFactory', function($s
     }, function(error){
       console.log(error);
     });
+
+    $scope.palResults = palFactory.testPal($scope.searchArray);
+    console.log($scope.palResults);
   }
 }]);
