@@ -3,18 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Evil Olive</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <h1 ng-if="bool" class="fade">Evil Olive</h1>
-    <button ng-click="bool=true">Fade In!</button>
-<button ng-click="bool=false">Fade Out!</button>
+    <button class="btn btn-primary" ng-click="bool=true">Fade In!</button>
+<button class="btn btn-primary" ng-click="bool=false">Fade Out!</button>
     <nav>
       <a href="#!/pal">Pal</a>
       <a href="#!/">Home</a>
     </nav>
     <ng-view></ng-view>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular-route.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-animate.min.js"></script>
