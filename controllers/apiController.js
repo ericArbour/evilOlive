@@ -3,7 +3,12 @@ var app = angular.module('myModule');
 app.controller('apiController', ['$scope', '$http', 'searchFactory', function($scope, $http, searchFactory) {
   alert('hi');
 
-  searchFactory.call();
+  searchFactory.call().then(function(response){
+     console.log(response);
+  }, function(error){
+      console.log(error)
+  });
+
   // $http({
   //   method: 'GET',
   //   url: 'https://community-food2fork.p.mashape.com/search?key=b5e7a2265c20832a3e572ad6ce2c5ebc&q=shredded+chicken%2C+mushrooms',

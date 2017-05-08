@@ -4,7 +4,7 @@ app.factory('searchFactory', ['$http',function($http){
 
   var obj = {};
   var recipeArray = [];
-  console.log('factory works');
+  // console.log('factory works');
   obj.call = function(){
     $http({
       method: 'GET',
@@ -14,9 +14,10 @@ app.factory('searchFactory', ['$http',function($http){
         'Accept': 'application/json'
       }
     }).then(function(response) {
-      console.log(response)
+      recipeArray = response.data.recipes;
+      // console.log(response)
     }, function(error) {
-      console.log(error)
+      // console.log(error)
     });
   }
   return obj;
