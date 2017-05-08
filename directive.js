@@ -7,3 +7,11 @@ return {
     replace: false
   }
 });
+
+app.directive('placePals', function(){
+return {
+    restrict:'E',
+    templateUrl:'palTemplate.html',
+    replace: false
+  }
+});
