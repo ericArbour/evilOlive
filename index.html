@@ -2,18 +2,22 @@
 <html ng-app="myModule">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Evil Olive</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <h1 ng-if="bool" class="fade">Evil Olive</h1>
+    <button ng-click="bool=true">Fade In!</button>
+<button ng-click="bool=false">Fade Out!</button>
     <nav>
       <a href="#!/pal">Pal</a>
       <a href="#!/">Home</a>
     </nav>
     <ng-view></ng-view>
 
-    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular-route.min.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-animate.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="controllers/apiController.js"></script>
     <script type="text/javascript" src="controllers/palController.js"></script>
