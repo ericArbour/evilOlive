@@ -1,13 +1,11 @@
 var app = angular.module('myModule');
 
 app.controller('apiController', ['$scope', '$http', 'searchFactory', function($scope, $http, searchFactory) {
-  alert('hi');
-
-  searchFactory.call().then(function(response){
-     console.log(response);
-  }, function(error){
-      console.log(error)
-  });
+  $scope.searchArray = [];
+  $scope.doStuff = function () {
+    $scope.searchArray.push($scope.item);
+  }
+  searchFactory.setSearch($scope.searchArray);
 
   // $http({
   //   method: 'GET',
